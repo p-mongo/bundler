@@ -8,6 +8,7 @@ module Bundler
     module_function # rubocop:disable Layout/AccessModifierIndentation
 
     def log_error(error)
+      puts "#{error.class}: #{error}"
       case error
       when YamlSyntaxError
         Bundler.ui.error error.message
