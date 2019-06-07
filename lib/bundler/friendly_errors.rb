@@ -7,6 +7,7 @@ module Bundler
   module_function
 
     def log_error(error)
+      puts "#{error.class}: #{error}"
       case error
       when YamlSyntaxError
         Bundler.ui.error error.message
